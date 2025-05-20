@@ -1,5 +1,6 @@
 import express from 'express';
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
+import connect from './config/db.js';
 
 dotenv.config();
 
@@ -12,5 +13,6 @@ app.get('/', (req,res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`This app running on port:${PORT}`)
+    console.log(`This app running on port:${PORT}`);
+    connect();
 })
