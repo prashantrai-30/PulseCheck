@@ -22,7 +22,7 @@ const policySchema = new Schema({
     categoryId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Category",
-        required: true
+        
     },
     comments: [
         { 
@@ -39,7 +39,7 @@ const policySchema = new Schema({
     createdBy:{
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
-        required: true
+        
     },
 });
 
